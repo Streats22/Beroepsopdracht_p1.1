@@ -10,8 +10,10 @@ time.sleep(1)
 Smokkelaar_A = "Samen met je famillie heb je een budget van een smokkelaar vinden gaat lastig worden..."
 
 Basis_verhaal2 = " Na een paar jaar orloog in eigenland komt er een opstand ze gaan voor de overheid\n en alle werknemers jij staat hoog op de lijst!"
+
 Basis_verhaal3 = " Op een feestdag besluit je overuren te draaien om wat extra te verdienen dit blijkt de\n verkeerde keuze te zijn de orginiasite valt aan en je moet ontsnappen of vechten!"
 print(Basis_verhaal +  Basis_verhaal2 +  Basis_verhaal3 + "a = Vechten\nb = Alleen vluchten\nc = Vluchten me je famillie" +"jou budget is " + budget)
+
 HoofdKeuze = input()
 
 
@@ -19,8 +21,26 @@ HoofdKeuze = input()
 if HoofdKeuze == "a":
     def Vecht():
         print("Na lang nadenken besluit je terug te vecht dit kan je doen door bij het verzet te gaan\n of vanuit het buurland te vechten tegen het onrecht")
-        print("A = Vlucht naar je buurland \nB = Blijf in je eigenland en vecht voor het Verzet!!"  )
-        Keuze_V = input("Waar kies je voor? ")
+        print("Wat is dit? er ligt iets waar je jezelf mogelijk mee kan beschermen er is A = een object wat op een lamp lijkt\nB = Bare hands! " )
+        Keuze_x = input("Waar kies je voor? ")
+        if Keuze_x == "B":
+            print("Je kiest voor het zelf vechten met je bare hands!")
+            time.sleep(1)
+            print("Ja het idee is leuk maar hun hebben wapen....")
+            print(EINDE)
+        elif Keuze_x == "A":
+            print("Je moet kiest ervoor om een wapen pakken  de wel genomende lamp ja dat is precies wat je denkt een lamp niets meer")
+            print(" na lang vechten heb je met de ijzere lamp 2 vechters kunnen uitschakelen alleen er is een 3e vechter die je uitschakelt met een kogel..")
+            print(EINDE)
+        else:
+            print("Dit is geen juiste invoer")
+            time.sleep(3)
+    Vecht()
+
+
+elif HoofdKeuze == "b":
+    def Vlucht_alleen():
+        print("je heb gekozen om je problemen to ontvluchten  zonder je famillie")
         if Keuze_V == "B":
             print("Je besluit het verzet te dienen in je eigenland")
             time.sleep(1)
@@ -35,14 +55,6 @@ if HoofdKeuze == "a":
         else:
             print("Dit is geen juiste invoer")
             time.sleep(3)
-    Vecht()
-
-
-elif HoofdKeuze == "b":
-    def Vlucht_alleen():
-        print("je heb gekozen om je problemen to ontvluchten je zonder je famillie")
-
-
     Vlucht_alleen()
 
 elif HoofdKeuze == "c":
